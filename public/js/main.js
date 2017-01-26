@@ -17,17 +17,17 @@ $(function() {
 // Define socket functions for the buttons
 
 	var left = function() {
-		console.log( "move stop" );
+		console.log( "move left" );
 		socket.emit( "move", "left" ); 	  // method .emit sends data to the socket
 	};
 
 	var right = function() {
-		console.log( "move stop" );
+		console.log( "move right" );
 		socket.emit( "move", "right" );
 	};
 
 	var slow = function() {
-		console.log( "move stop" );
+		console.log( "move slow" );
 		socket.emit( "move", "slow" );
 	};
 
