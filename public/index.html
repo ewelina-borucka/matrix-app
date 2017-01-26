@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Matrix App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Matrix App</h1>
+  <h2>Arduino LED Controller</h2>
+
+  <div class="controls">
+
+		<div class="controls-left-right">
+			<button class="btn-left" id="left">&larr;</button>
+      <button class="btn-right" id="right">&rarr;</button>
+		</div>
+
+		<div class="controls-stop-slow">
+      <button class="btn-slow" id="slow">&darr;</button>
+      <button class="btn-stop" id="stop">&times;</button>
+		</div>
+    <br>
+    <br>
+    <br>
+		<div>
+			<input type="text" id="text">
+      <button class="btn-submit" id="btn-text"></button>
+		</div>
+
+	</div>
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/socket.io.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
