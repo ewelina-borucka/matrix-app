@@ -1,13 +1,195 @@
+/* -------------------------- BASE STYLING ------------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+
 * {
   box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  color: #383838;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  padding: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+  justify-content: space-between;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+button {
+  border: none;
+  color: ghostwhite;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Lato";
+}
+
+/* -------------------------- NAV buttons ------------------------ */
+
+.controls {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.nav {
+  flex: 1;
+  width: 160px;
+  height: 160px;
+  margin: 1%;
+  border-radius: 4px;
+}
+
+.btxt {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.9rem;
+  text-transform: uppercase;
+}
+
+.btn-stop {
+  background-color: red;
+}
+
+.btn-slow {
+  background-color: orange;
+}
+
+.btn-yo {
+  background-color: #BADA55;
+}
+
+.btn-left,
+.btn-right {
+  background-color: #484848;
+}
+
+/* -------------------------- TEXT INPUT ------------------------ */
+
+.input {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 40px;
+  border: none;
+}
+
+#text {
+  font-family: monospace;;
+  font-size: 2rem;
+  width: 300px;
+}
+
+.btn-submit {
+  width: 60px;
+  height: 60px;
+  border-radius: 2px;
+  margin-left: 5px;
+}
+
+
+/* -------------------------- BOARD ------------------------ */
+td {
+  border: 2px solid #303030;;
+  border-radius: 4px;
+  height: 25px;
+  width: 25px;
+}
+
+td:hover {
+  background-color: red;
+}
+
+#board {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+/* -------------------------- EMOJI buttons ------------------------ */
+
+.buttons {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.box {
+  width: 100px;
+  height: 80px;
+  margin: 20px 5px;
+  border-radius: 4px;
+  background-color: white;
+  color: #303030;
+  border: 1px solid #303030;;
+  transition: 0.2s linear;
+}
+
+.box:hover {
+  background-color: hotpink;
+  color: white;
+  border: none;
+}
+
+.btn-emoji {
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 
 
-body {
-  margin: 0;
-  font-family: monospace;
-  color: #303030;
-  background-color: ghostwhite;
-  text-align: center;
+/* -------------------------- MEDIA QUERIES mobile ------------------------ */
+
+@media (max-width: 500px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  #board {
+    display: none;
+  }
+
+  .controls {
+    display: block;
+    margin-top: 0px;
+  }
+
+  .nav {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+  }
+
 }
