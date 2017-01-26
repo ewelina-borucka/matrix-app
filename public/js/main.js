@@ -17,23 +17,23 @@ $(function() {
 // Define socket functions for the buttons
 
 	var left = function() {
-		console.log( "move left" );
-		socket.emit( "move", "left" ); 	  // method .emit sends data to the socket
+		console.log( "user input left" );
+		socket.emit( "go", "left" ); 	  // method .emit sends data to the socket
 	};
 
 	var right = function() {
-		console.log( "move right" );
-		socket.emit( "move", "right" );
+		console.log( "user input right" );
+		socket.emit( "go", "right" );
 	};
 
 	var slow = function() {
-		console.log( "move slow" );
-		socket.emit( "move", "slow" );
+		console.log( "user input slow" );
+		socket.emit( "go", "slow" );
 	};
 
 	var stop = function() {
-		console.log( "move stop" );
-		socket.emit( "move", "stop" );
+		console.log( "user input stop" );
+		socket.emit( "go", "stop" );
 	};
 
 	btnLeft.on( "click", left );
@@ -48,7 +48,7 @@ $(function() {
 	btnText.on( "click", function() {
 		var text = userIput.val();
 		console.log( text );
-		socket.emit( "text", text );
+		socket.emit( "userInput", text );
 	} );
 
 
