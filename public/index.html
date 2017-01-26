@@ -8,34 +8,41 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Matrix App</h1>
-  <h2>Arduino LED Controller</h2>
+  <div class="container">
+    <header>
+      <h1>Matrix App</h1>
+      <h2>Arduino LED Controller</h2>
+    </header>
 
-  <div class="controls">
+    <div class="controls">
+  		<button class="nav btn-left" id="left"><span class="btxt">left</span></button>
+      <button class="nav btn-slow" id="slow"><span class="btxt">slow</span></button>
+      <button class="nav btn-yo" id="yo"><span class="btxt">y0!</span></button>
+      <button class="nav btn-stop" id="stop"><span class="btxt">stop</span></button>
+      <button class="nav btn-right" id="right"><span class="btxt">right</span></button>
+    </div>
 
-		<div class="controls-left-right">
-			<button class="btn-left" id="left">&larr;</button>
-      <button class="btn-right" id="right">&rarr;</button>
-		</div>
-
-		<div class="controls-stop-slow">
-      <button class="btn-slow" id="slow">&darr;</button>
-      <button class="btn-stop" id="stop">&times;</button>
-		</div>
-    <br>
-    <br>
-    <br>
-		<div>
-			<input type="text" id="text">
+		<div class="input">
+			<input type="text" id="text" placeholder="type here!">
       <button class="btn-submit" id="btn-text"></button>
 		</div>
 
-	</div>
+    <div id="board"></div>
 
-
-
+    <div class="buttons">
+      <button class="box" id="smile"><span class="btn-emoji">smile</span></button>
+      <button class="box" id="ball"><span class="btn-emoji">ball</span></button>
+      <button class="box" id="tongueout"><span class="btn-emoji">tongue out</span></button>
+      <button class="box" id="winkright"><span class="btn-emoji">wink right</span></button>
+      <button class="box" id="speaker"><span class="btn-emoji">speaker</span></button>
+      <button class="box" id="donut"><span class="btn-emoji">donut</span></button>
+      <button class="box" id="angryface"><span class="btn-emoji">angry face</span></button>
+      <button class="box" id="blink"><span class="btn-emoji">blink</span></button>
+    </div>
+  </div>
   <script src="js/jquery.js"></script>
   <script src="js/socket.io.js"></script>
+  <script src="js/led-art.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
