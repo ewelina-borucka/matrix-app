@@ -2,7 +2,6 @@
 
 var app = require("http").createServer(),
 	io = require("socket.io").listen( app ),
-	// fs = require("fs"),
 	port = 8888,
 	five = require("johnny-five");
 
@@ -54,7 +53,13 @@ board.on( "ready", function() {
 					matrix.device(2).draw("O");
 					matrix.device(3).draw("P");
 					break;
-			}
+				case "yo":
+					matrix.device(0).draw("y");
+					matrix.device(1).draw("o");
+					matrix.device(2).draw("!");
+					matrix.device(3).draw("!");
+					break;
+				}
 		});
 
 		socket.on( "userInput", function( text ) {
@@ -72,7 +77,12 @@ board.on( "ready", function() {
 				}
 			}
 		});
+
+		socket.on("ledArt", function(binaryMap) {
+			matrix.draw(binaryMap);
+		});
 	});
+
 
 	board.repl.inject( {
 		matrix1: matrix.device(0),

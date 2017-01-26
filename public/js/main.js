@@ -72,7 +72,7 @@ $(function() {
 
 	var yo = function() {
 		console.log( "user input yo" );
-		socket.emit( "userInput", "yo!!" );
+		socket.emit( "go", "yo" );
 	};
 
 	var smile = function () {
